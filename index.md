@@ -1,8 +1,8 @@
-# Política de Privacidade — EMOP Planos de Estudos
+# Política de Privacidade — EMOP Planos de Estudos Inteligentes
 
 **Última atualização:** 1 de maio de 2026
 **App:** EMOP Planos de Estudos
-**Identificador:** com.emop.app
+**Identificador:** com.emop.planner
 **Plataformas:** iOS e Android
 
 ---
