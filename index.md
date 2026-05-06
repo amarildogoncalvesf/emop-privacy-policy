@@ -1,4 +1,4 @@
-# Política de Privacidade — EMOP Planos de Estudos Inteligentes
+# Política de Privacidade — EMOP Planos de Estudo: ENEM e Médio
 
 **Última atualização:** 1 de maio de 2026
 **App:** EMOP Planos de Estudos
