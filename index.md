@@ -66,28 +66,31 @@ Como praticamente todos os dados ficam no seu dispositivo, você tem controle to
 - **Portabilidade:** você pode exportar uma cópia completa dos seus dados em formato JSON em **Configurações → Dados e privacidade → Exportar meus dados**.
 - **Exclusão:** você pode apagar permanentemente todos os seus dados em **Configurações → Dados e privacidade → Apagar todos os dados**, ou simplesmente desinstalando o aplicativo.
 
-Em relação aos relatórios de erro enviados ao Sentry (seção 8), você pode solicitar a exclusão entrando em contato pelo e-mail abaixo.
+Em relação aos relatórios de erro (Sentry) e eventos de uso anônimos (PostHog) descritos na seção 8, você pode solicitar a exclusão entrando em contato pelo e-mail abaixo.
 
 ## 8. Análise, anúncios e relatórios de erro
 
 O EMOP **não usa**:
 
-- Google Analytics, Firebase Analytics ou qualquer outra ferramenta de análise de comportamento ou métricas de uso;
-- Nenhuma rede de anúncios;
-- Nenhum SDK de rastreamento publicitário (não há *App Tracking Transparency* ativado porque não há rastreamento);
-- Nenhum cookie, nenhum identificador persistente para fins comerciais.
+- Nenhuma rede de anúncios e nenhum SDK de rastreamento publicitário (não há *App Tracking Transparency* ativado porque não há rastreio para fins de marketing);
+- Nenhum cookie ou identificador persistente para fins comerciais;
+- Nenhuma ferramenta de análise que capture o conteúdo do seu estudo (nomes de matérias, tópicos, notas, redações) ou que faça gravação de tela/sessão.
 
-O EMOP **usa, apenas em compilações de produção**:
+O EMOP **usa, apenas em compilações de produção nativas (iOS/Android)**:
 
 - **Sentry** (sentry.io, operado por Functional Software, Inc., EUA) para receber relatórios automáticos quando o app trava ou encontra um erro. Esses relatórios contêm: tipo e modelo do aparelho, versão do sistema operacional, versão do app, rastreamento técnico (stack trace) do erro, endereço IP aproximado da requisição e, em caso de corrupção de dados locais, uma pequena amostra (até 200 caracteres) do trecho corrompido para diagnóstico. Os relatórios **não contêm** o conteúdo do seu cronograma, suas notas, seus tópicos de estudo, seu progresso ou qualquer informação pessoal identificável fornecida por você. O propósito exclusivo é descobrir e corrigir bugs.
 
-Em compilações de desenvolvimento e na versão web, nenhum relatório é enviado.
+- **PostHog** (posthog.com, operado por PostHog Inc., EUA) para análise agregada e anônima de uso do app — quais telas e funcionalidades são mais utilizadas, em que momento da jornada um usuário desiste do cadastro, com que frequência uma sequência de estudos é mantida. Os eventos enviados contêm apenas: identificadores numéricos, contagens, categorias pré-definidas (por exemplo: tipo de objetivo "ENEM"/"Vestibular"/"Prova Escolar", modo de foco escolhido) e marcos de tempo. Os eventos **não contêm** nomes de matérias ou tópicos digitados por você, suas notas, conteúdo de redações, datas de provas ou qualquer texto livre que você tenha inserido. Não usamos gravação de sessão (session replay) nem captura automática de toques. Um identificador anônimo gerado pelo PostHog é usado para distinguir aparelhos sem associá-los à sua identidade.
+
+Em compilações de desenvolvimento e na versão web, nenhum relatório do Sentry ou evento do PostHog é enviado.
+
+**Transferência internacional de dados:** tanto o Sentry quanto o PostHog processam dados em servidores localizados nos Estados Unidos. Essa transferência é realizada com base no art. 33, inciso IX, da LGPD (necessidade específica de execução de contrato do qual o titular é parte) e está sujeita às garantias de segurança técnicas e contratuais dos próprios provedores. Você pode solicitar a exclusão dos seus dados em qualquer um dos dois serviços entrando em contato pelo e-mail abaixo.
 
 ## 9. Segurança
 
 Os dados que ficam no seu aparelho estão armazenados no sistema de armazenamento padrão do dispositivo, protegido pelo próprio sistema operacional (sandbox de aplicativos do iOS e do Android). Não há transmissão pela internet do seu conteúdo de estudo.
 
-Os relatórios de erro enviados ao Sentry trafegam por conexão criptografada (HTTPS/TLS) e ficam sujeitos à política de segurança e retenção do próprio Sentry.
+Os relatórios enviados ao Sentry e ao PostHog trafegam por conexão criptografada (HTTPS/TLS) e ficam sujeitos à política de segurança e retenção dos respectivos provedores.
 
 ## 10. Alterações nesta política
 
@@ -170,28 +173,31 @@ Since almost all data lives on your device, you are in full control:
 - **Portability:** you can export a full copy of your data in JSON format under **Settings → Data and Privacy → Export my data**.
 - **Deletion:** you can permanently delete all your data under **Settings → Data and Privacy → Delete all data**, or simply by uninstalling the app.
 
-Regarding the crash reports sent to Sentry (section 8), you may request deletion by contacting the email below.
+Regarding the crash reports (Sentry) and anonymous usage events (PostHog) described in section 8, you may request deletion by contacting the email below.
 
 ## 8. Analytics, ads, and error reporting
 
 EMOP **does not use**:
 
-- Google Analytics, Firebase Analytics, or any other behavior or usage analytics tool;
-- Any advertising network;
-- Any advertising tracking SDK (no *App Tracking Transparency* prompt is shown because there is no tracking);
-- No cookies, no persistent identifier for commercial purposes.
+- Any advertising network or advertising tracking SDK (no *App Tracking Transparency* prompt is shown because there is no marketing tracking);
+- No cookies or persistent identifiers for commercial purposes;
+- No analytics tool that captures your study content (subject names, topics, scores, essays) or that performs screen/session recording.
 
 EMOP **does use, in production builds only**:
 
 - **Sentry** (sentry.io, operated by Functional Software, Inc., USA) to receive automatic reports when the app crashes or encounters an error. These reports contain: device type and model, operating system version, app version, technical stack trace of the error, approximate IP address of the request, and — in case of local data corruption — a small sample (up to 200 characters) of the corrupted snippet for diagnosis. The reports **do not contain** the contents of your schedule, your scores, your study topics, your progress, or any personal information you provided. The sole purpose is to find and fix bugs.
 
-In development builds and on the web version, no reports are sent.
+- **PostHog** (posthog.com, operated by PostHog Inc., USA) for aggregated and anonymous product analytics — which screens and features are used most, at which step of the onboarding users drop off, how often study streaks are maintained. The events sent contain only: numeric identifiers, counts, pre-defined categories (e.g., goal type "ENEM"/"Vestibular"/"School Exam", chosen focus mode) and timestamps. The events **do not contain** subject or topic names you typed, your scores, essay content, exam dates, or any free-text input you provided. We do not use session replay or autocapture of touches. An anonymous identifier generated by PostHog is used to distinguish devices without linking them to your identity.
+
+In development builds and on the web version, no Sentry reports or PostHog events are sent.
+
+**International data transfer:** both Sentry and PostHog process data on servers located in the United States. This transfer is carried out under article 33, item IX, of Brazil's LGPD (specific necessity for performance of a contract to which the data subject is a party) and is subject to the technical and contractual security safeguards of the respective providers. You may request deletion of your data from either service by contacting the email below.
 
 ## 9. Security
 
 Data stored on your device sits in the operating system's standard local storage, protected by the OS itself (iOS and Android app sandboxing). Your study content is not transmitted over the internet.
 
-Crash reports sent to Sentry travel over encrypted connections (HTTPS/TLS) and are subject to Sentry's own security and retention policy.
+Reports sent to Sentry and PostHog travel over encrypted connections (HTTPS/TLS) and are subject to the security and retention policies of the respective providers.
 
 ## 10. Changes to this policy
 
