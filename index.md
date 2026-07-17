@@ -1,4 +1,4 @@
-# Política de Privacidade — EMOP Planos de Estudo: ENEM e Médio
+# Política de Privacidade — EMOP - Rotina de Estudos: ENEM e Provas Regulares
 
 **Última atualização:** 16 de julho de 2026
 **App:** EMOP Planos de Estudos
